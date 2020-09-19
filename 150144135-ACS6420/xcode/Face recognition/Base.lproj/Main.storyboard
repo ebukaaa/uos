@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQ5-Pa-lIC">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="v4U-fY-usm">
+            <objects>
+                <tabBarController id="BQ5-Pa-lIC" customClass="TabBarViewController" customModule="Face_Recognition_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qtz-Lg-Vb2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.58977085350000003" green="0.82433468099999996" blue="0.78823381660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.58977085350000003" green="0.82433468099999996" blue="0.78823381660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vBI-41-OK3" kind="relationship" relationship="viewControllers" id="TuN-mL-aUh"/>
+                        <segue destination="pPB-4G-T4c" kind="relationship" relationship="viewControllers" id="2AD-Is-gjo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4L-rR-Wp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328" y="-134"/>
+        </scene>
+        <!--Face Recognition on Static Image-->
+        <scene sceneID="24i-S3-Dlj">
+            <objects>
+                <tableViewController id="zl0-DZ-pBu" customClass="OnStaticImageViewController" customModule="Face_Recognition_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uuB-bU-DQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="ozl-qo-3tA">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="430" id="SGN-4X-P6U">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SGN-4X-P6U" id="2F4-pf-Ymn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bkb-FE-iNC">
+                                                    <rect key="frame" x="0.0" y="15" width="414" height="400"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="400" id="hJn-Xr-hJC"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Bkb-FE-iNC" secondAttribute="trailing" id="Rb8-bc-7Mm"/>
+                                                <constraint firstItem="Bkb-FE-iNC" firstAttribute="centerY" secondItem="2F4-pf-Ymn" secondAttribute="centerY" id="VLs-xq-rtp"/>
+                                                <constraint firstItem="Bkb-FE-iNC" firstAttribute="leading" secondItem="2F4-pf-Ymn" secondAttribute="leading" id="wmd-YN-ZPF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="taW-xM-ZH2">
+                                        <rect key="frame" x="0.0" y="430" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="taW-xM-ZH2" id="uqs-XV-0OR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofd-eB-DoW">
+                                                    <rect key="frame" x="16" y="31.5" width="382" height="37"/>
+                                                    <color key="backgroundColor" red="0.5465453267" green="0.76541763539999996" blue="0.73333227629999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="gxj-ar-eMq"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.82405638690000005" green="0.91800427439999999" blue="0.9019605517" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Capture / Import Image">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="captureOrImportImage:" destination="zl0-DZ-pBu" eventType="touchUpInside" id="zoo-Dh-AkC"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ofd-eB-DoW" firstAttribute="leading" secondItem="uqs-XV-0OR" secondAttribute="leading" constant="16" id="173-Hx-lHb"/>
+                                                <constraint firstItem="Ofd-eB-DoW" firstAttribute="centerY" secondItem="uqs-XV-0OR" secondAttribute="centerY" id="4Dr-u8-XZm"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ofd-eB-DoW" secondAttribute="trailing" constant="16" id="FQn-qK-1eQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="zl0-DZ-pBu" id="Lr5-28-63S"/>
+                            <outlet property="delegate" destination="zl0-DZ-pBu" id="4em-ZT-BJa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Face Recognition on Static Image" id="NWy-ko-AWp"/>
+                    <connections>
+                        <outlet property="imageView" destination="Bkb-FE-iNC" id="ecj-R1-ecH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7YL-Kf-RCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="232"/>
+        </scene>
+        <!--Static Image-->
+        <scene sceneID="5NU-GU-vUg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pPB-4G-T4c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Static Image" image="face" id="idJ-y1-zo1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bah-S7-mGF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zl0-DZ-pBu" kind="relationship" relationship="rootViewController" id="UTC-Ot-rmT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yc2-7N-1eN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="233"/>
+        </scene>
+        <!--Realtime Face Detection-->
+        <scene sceneID="hXv-hZ-TMr">
+            <objects>
+                <viewController id="7fc-we-nFi" customClass="RealtimeViewController" customModule="Face_Recognition_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPr-x2-GjW" customClass="Preview" customModule="Face_Recognition_Project" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pf9-ng-vTv">
+                                <rect key="frame" x="8" y="96" width="398" height="29"/>
+                                <segments>
+                                    <segment title="Rectangle"/>
+                                    <segment title="Landmarks"/>
+                                </segments>
+                                <color key="tintColor" red="0.58977085350000003" green="0.82433468099999996" blue="0.78823381660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="updateDetectionType:" destination="7fc-we-nFi" eventType="valueChanged" id="bcj-64-3OZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJU-4V-Iu1">
+                                <rect key="frame" x="177" y="723" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1VP-qu-XOd"/>
+                                    <constraint firstAttribute="height" constant="60" id="nSC-9s-iG2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="captureButton:" destination="7fc-we-nFi" eventType="touchUpInside" id="X8B-b8-4dE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VJU-4V-Iu1" firstAttribute="centerX" secondItem="gPr-x2-GjW" secondAttribute="centerX" id="2Z0-Lv-f7H"/>
+                            <constraint firstItem="Pf9-ng-vTv" firstAttribute="top" secondItem="baV-vw-S5M" secondAttribute="top" constant="8" id="Uyg-2o-WeY"/>
+                            <constraint firstItem="baV-vw-S5M" firstAttribute="bottom" secondItem="VJU-4V-Iu1" secondAttribute="bottom" constant="30" id="Wii-Ta-ZTI"/>
+                            <constraint firstItem="baV-vw-S5M" firstAttribute="trailing" secondItem="Pf9-ng-vTv" secondAttribute="trailing" constant="8" id="kYO-dI-WQB"/>
+                            <constraint firstItem="Pf9-ng-vTv" firstAttribute="leading" secondItem="baV-vw-S5M" secondAttribute="leading" constant="8" id="t6S-OG-pAD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="baV-vw-S5M"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Realtime Face Detection" id="iaS-Jn-SJi"/>
+                    <connections>
+                        <outlet property="preview" destination="gPr-x2-GjW" id="DFB-kW-0Yf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cp1-ON-vWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879" y="-702"/>
+        </scene>
+        <!--Realtime-->
+        <scene sceneID="3N4-Gs-6Ml">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vBI-41-OK3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Realtime" image="facial-recognition" id="AYI-vQ-EkD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AeR-Gy-W9o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7fc-we-nFi" kind="relationship" relationship="rootViewController" id="Ecx-2r-sTZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lkj-a7-OVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1167" y="-702"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="face" width="16" height="16"/>
+        <image name="facial-recognition" width="16" height="16"/>
+    </resources>
+</document>
